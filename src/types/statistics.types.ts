@@ -7,7 +7,7 @@ interface ISalesByWeek {
 	total: number;
 }
 
-export interface IStatisticsResponse {
+export interface IMiddleStatisticsResponse {
 	topMovies: ITopMovie[];
 	salesByWeek: ISalesByWeek[];
 }
