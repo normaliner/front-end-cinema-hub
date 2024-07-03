@@ -22,11 +22,11 @@ class AuthService {
 		const refreshToken = Cookies.get(EnumTokens.REFRESH_TOKEN);
 		const response = await axiosClassic.post<string, { data: IAuthResponse }>(
 			API_URL.auth(`/login/access-token`),
-			{refreshToken},
+			{ refreshToken },
 		);
 		if (response.data.accessToken) saveToStorage(response.data);
 
 		return response;
 	}
 }
-export default new AuthService();
+export const authService = new AuthService();

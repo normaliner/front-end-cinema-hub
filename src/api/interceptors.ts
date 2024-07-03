@@ -2,10 +2,13 @@ import axios, { type CreateAxiosDefaults } from 'axios';
 
 import { SERVER_URL } from '@/config/api.config';
 
-import { getAccessToken, removeFromStorage } from '@/services/auth/auth-token.service';
+import {
+	getAccessToken,
+	removeFromStorage,
+} from '@/services/auth/auth-token.service';
+import { authService } from '@/services/auth/auth.service';
 
 import { errorCatch } from './error';
-import authService from '@/services/auth/auth.service'
 
 const options: CreateAxiosDefaults = {
 	baseURL: SERVER_URL,
@@ -47,4 +50,4 @@ axiosWithAuth.interceptors.response.use(
 	},
 );
 
-export {axiosClassic, axiosWithAuth}
+export { axiosClassic, axiosWithAuth };
