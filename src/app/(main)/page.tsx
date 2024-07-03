@@ -1,11 +1,9 @@
-import Button from '@/components/ui/form-elements/button/Button';
-import Field from '@/components/ui/form-elements/field/Field'
+import Home from './Home';
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<main className='flex justify-center items-center'>
-			<Button size='sm' variant='outline'>TEst</Button>
-      <Field placeholder='ddd'/>
+			<Home />
 		</main>
 	);
 }
