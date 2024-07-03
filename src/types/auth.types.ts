@@ -1,4 +1,4 @@
-import { IUser } from './user.types'
+import { IUser } from './user.types';
 
 export interface IAuthForm {
 	name?: string;
@@ -6,8 +6,11 @@ export interface IAuthForm {
 	password: string;
 }
 
-export interface IAuthResponse {
-	user: IUser,
-	accessToken: string,
-	refreshToken: string
+export interface ITokens {
+	accessToken: string;
+	refreshToken: string;
+}
+
+export interface IAuthResponse extends ITokens {
+	user: IUser;
 }
