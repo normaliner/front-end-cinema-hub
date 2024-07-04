@@ -4,10 +4,11 @@ import type { Metadata } from 'next';
 
 import '@/assets/styles/globals.scss';
 
+import { APP_URL } from '@/config/url.config';
+
 import { SITE_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants';
 
 import Providers from './providers';
-import { APP_URL } from '@/config/url.config'
 
 export const metadata: Metadata = {
 	title: {

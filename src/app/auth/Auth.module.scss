@@ -5,11 +5,14 @@
 		> .heading {
 			@apply text-3xl mb-6;
 		}
+		> form {
+			@apply lg:min-w-[350px];
+		}
 		.button {
 			@apply mt-4 w-full;
 		}
 		.toggle {
-			@apply mt-3;
+			@apply mt-3 flex justify-between;
 		}
 	}
 	> .right {
