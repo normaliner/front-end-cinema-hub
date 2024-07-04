@@ -44,11 +44,15 @@ const Auth: FC = () => {
 						{isLoginForm ? 'Войти' : 'Создать аккаунт'}
 					</Button>
 					<div className={styles.toggle}>
-						{isLoginForm ? 'Еще нет аккаунта?' : 'Уже есть аккаунт? '}
+						{isLoginForm ? (
+							<div>Еще нет аккаунта?</div>
+						) : (
+							<div>Уже есть аккаунт?</div>
+						)}
 						<button
 							type='button'
 							onClick={() => setIsLoginForm(!isLoginForm)}
-							className='text-primary'
+							className='text-primary block'
 						>
 							{isLoginForm ? 'Создать аккаунт' : ' Войти в аккаунт'}
 						</button>

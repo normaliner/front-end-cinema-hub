@@ -23,7 +23,7 @@ const Providers: FC<PropsWithChildren> = ({ children }) => {
 					duration: 2000,
 					style: {
 						background: '#333',
-						color: 'fff',
+						color: '#fff',
 					},
 				}}
 			/>

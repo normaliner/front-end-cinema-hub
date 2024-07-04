@@ -9,6 +9,7 @@ import { authService } from '@/services/auth/auth.service';
 
 import { IAuthForm } from '@/types/auth.types';
 
+
 export const useAuthMutation = (
 	isLoginForm: boolean,
 	reset: UseFormReset<IAuthForm>,
@@ -36,5 +37,5 @@ export const useAuthMutation = (
 			}
 		},
 	});
-	return {mutate};
+	return { mutate };
 };
