@@ -9,5 +9,4 @@ const Heading: FC<PropsWithChildren<IHeading>> = ({ children, className }) => {
 		<h1 className={cn('text-2xl font-semibold', className)}>{children}</h1>
 	);
 };
-
 export default Heading;
