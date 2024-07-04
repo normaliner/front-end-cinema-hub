@@ -33,6 +33,9 @@ export const ADMIN_URL = {
 	genres: () => ADMIN_URL.root('genres'),
 	genreEdit: (id = '') => ADMIN_URL.root(`genres/${id}`),
 
+	actors: () => ADMIN_URL.root('actors'),
+	actorEdit: (id = '') => ADMIN_URL.root(`actors/${id}`),
+	
 	reviews: () => ADMIN_URL.root('reviews'),
 
 	payments: () => ADMIN_URL.root('payments'),
