@@ -34,7 +34,7 @@ const SearchList: FC<ISearchList> = ({ movies }) => {
 					</Link>
 				))
 			) : (
-				<div className={styles.notFound}>Ничего не найдено.</div>
+				<div className={styles.notFound}>Ничего не найдено</div>
 			)}
 		</div>
 	);
