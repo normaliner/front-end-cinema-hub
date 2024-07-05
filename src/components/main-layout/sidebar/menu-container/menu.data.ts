@@ -23,8 +23,8 @@ export const userMenu: IMenu = {
 	],
 };
 
-export const adminMenu:IMenu = {
-	title:'Меню',
+export const adminMenu: IMenu = {
+	title: 'Меню',
 	items: [
 		{
 			icon: 'LuLayoutDashboard',
@@ -32,14 +32,14 @@ export const adminMenu:IMenu = {
 			value: 'Статистика',
 		},
 		{
-			icon: 'LuTv',
-			link: ADMIN_URL.movies(),
-			value: 'Фильмы',
-		},
-		{
 			icon: 'LuUsers',
 			link: ADMIN_URL.users(),
 			value: 'Пользователи',
+		},
+		{
+			icon: 'LuTv',
+			link: ADMIN_URL.movies(),
+			value: 'Фильмы',
 		},
 		{
 			icon: 'LuBook',
@@ -62,4 +62,4 @@ export const adminMenu:IMenu = {
 			value: 'Платежи',
 		},
 	],
-}
+};

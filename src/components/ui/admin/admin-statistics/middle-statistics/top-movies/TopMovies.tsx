@@ -1,10 +1,17 @@
 import { FC } from 'react';
-import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import {
+	Cell,
+	Legend,
+	Pie,
+	PieChart,
+	ResponsiveContainer,
+	Tooltip,
+} from 'recharts';
 
 import { ITopMovie } from '@/types/statistics.types';
 
 import styles from './TopMovies.module.scss';
-import TopMoviesTooltip from './TopMoviesTooltip'
+import TopMoviesTooltip from './TopMoviesTooltip';
 
 const COLORS = ['#B61C1C', '#822A2A', '#790A0A', '#5D0B0B'];
 
@@ -22,7 +29,6 @@ const TopMovies: FC<ITopMovies> = ({ data }) => {
 						verticalAlign='bottom'
 						align='center'
 						iconType='circle'
-					
 						content={({ payload }: any) => {
 							return (
 								<ul>
