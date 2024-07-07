@@ -10,7 +10,7 @@ type TypeData = {
 };
 class ReviewService {
 	async getAll() {
-		const { data } = await axiosClassic.get<IReview[]>(API_URL.reviews(''));
+		const { data } = await axiosWithAuth.get<IReview[]>(API_URL.reviews(''));
 		return data;
 	}
 
