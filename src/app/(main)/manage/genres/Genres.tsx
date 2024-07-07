@@ -7,6 +7,7 @@ import AdminList from '@/components/ui/admin/admin-table/admin-list/AdminList'
 import Heading from '@/components/ui/heading/Heading'
 
 import { useAdminGenres } from './useAdminGenres'
+import { ADMIN_URL } from '@/config/url.config'
 
 const Genres: FC = () => {
 	const {

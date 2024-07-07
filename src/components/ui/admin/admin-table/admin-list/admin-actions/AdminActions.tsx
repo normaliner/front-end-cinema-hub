@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 
-import { Icon } from '@/components/ui/icon';
+import { Icon } from '@/components/ui/Icon';
 
 import { IListItem } from '../admin-list.interface';
 

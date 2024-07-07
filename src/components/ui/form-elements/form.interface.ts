@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
-import { FieldError } from 'react-hook-form';
+import { FieldError, UseFormRegister } from 'react-hook-form';
 
 export interface IField extends InputHTMLAttributes<HTMLInputElement> {
 	placeholder: string;
@@ -8,4 +8,10 @@ export interface IField extends InputHTMLAttributes<HTMLInputElement> {
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: 'default' | 'outline';
 	size?: 'sm' | 'md';
+}
+
+export interface ISlugField {
+	error?: FieldError;
+	register: UseFormRegister<any>;
+	generate: () => void;
 }
