@@ -1,7 +1,8 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { FC } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 
 import SkeletonLoader from '@/components/ui/SkeletonLoader';
 import formstyles from '@/components/ui/form-elements/AdminForm.module.scss';
@@ -9,15 +10,20 @@ import Button from '@/components/ui/form-elements/button/Button';
 import Field from '@/components/ui/form-elements/field/Field';
 import SlugField from '@/components/ui/form-elements/slug-field/SlugField';
 import Heading from '@/components/ui/heading/Heading';
-
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 import { IGenreEditInput } from '@/types/genre.types';
 
+import { generateSlug } from '@/utils/string/generateSlug';
+
 import { useGenreEdit } from './useGenreEdit';
-import { generateSlug } from '@/utils/string/generateSlug'
 
 interface IGenreEdit {
 	genreId: string;
 }
+const DynamicTextEditor = dynamic(
+	() => import('@/components/ui/form-elements/text-editor/TextEditor'),
+	{ ssr: false },
+);
 
 const GenreEdit: FC<IGenreEdit> = ({ genreId }) => {
 	const { genre, isLoading, onSubmit } = useGenreEdit(genreId);
@@ -78,7 +84,21 @@ const GenreEdit: FC<IGenreEdit> = ({ genreId }) => {
 								style={{ width: '31%' }}
 							/>
 						</div>
-						{/* Text editor */}
+						<Controller
+							name='description'
+							control={control}
+							render={({
+								field: { value, onChange },
+								fieldState: { error },
+							}) => (
+								<DynamicTextEditor
+									placeholder='Описание'
+									onChange={onChange}
+									error={error}
+									value={value}
+								/>
+							)}
+						/>
 						<Button>Сохранить</Button>
 					</>
 				)}

@@ -1,3 +1,4 @@
+import { EditorProps } from 'draft-js';
 import { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
 import { FieldError, UseFormRegister } from 'react-hook-form';
 
@@ -14,4 +15,11 @@ export interface ISlugField {
 	error?: FieldError;
 	register: UseFormRegister<any>;
 	generate: () => void;
+}
+
+type TypeEditorField = EditorProps & IField;
+
+export interface ITextEditor extends Omit<TypeEditorField, 'editorState'> {
+	onChange: (...event: any[]) => void;
+	value: string;
 }
