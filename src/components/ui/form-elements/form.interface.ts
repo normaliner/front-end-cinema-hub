@@ -1,10 +1,15 @@
-import { EditorProps } from 'draft-js';
-import {
+import type { EditorProps } from 'draft-js';
+import type {
 	ButtonHTMLAttributes,
 	CSSProperties,
 	InputHTMLAttributes,
 } from 'react';
-import { FieldError, UseFormRegister } from 'react-hook-form';
+import type {
+	ControllerRenderProps,
+	FieldError,
+	UseFormRegister,
+} from 'react-hook-form';
+import type { Options } from 'react-select';
 
 export interface IField extends InputHTMLAttributes<HTMLInputElement> {
 	placeholder: string;
@@ -35,4 +40,16 @@ export interface IUploadFields {
 	error?: FieldError;
 	style?: CSSProperties;
 	isNoImage?: boolean;
+}
+
+export interface IOption {
+	label: string;
+	value: string;
+}
+
+export interface ISelect extends IField {
+	options: Options<IOption>;
+	isMulti?: boolean;
+	field: ControllerRenderProps<any, any>;
+	isLoading?: boolean;
 }

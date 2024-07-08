@@ -7,9 +7,9 @@ export interface IMovie {
 	poster: string;
 	bigPoster: string;
 	title: string;
-	year: string;
+	year: number;
 	slug: string;
-	duration: string;
+	duration: number;
 	country: string;
 	genres: IGenre[];
 	actors: IActor[];
