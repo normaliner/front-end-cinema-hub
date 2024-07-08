@@ -5,9 +5,6 @@
 		@apply relative h-[350px] overflow-hidden shadow-xl flex items-center;
 		@include fade-bg-gradient();
 
-		.image {
-			
-		}
 		.content {
 			@apply relative z-20 px-14;
 

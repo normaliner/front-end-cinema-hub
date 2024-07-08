@@ -14,7 +14,7 @@ class MovieService {
 
 	async getMostPopularMovies() {
 		const { data: movies } = await axiosClassic.get<IMovie[]>(
-			API_URL.movies('most-popular'),
+			API_URL.movies('/most-popular'),
 		);
 		return movies;
 	}
