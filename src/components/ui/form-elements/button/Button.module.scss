@@ -1,5 +1,5 @@
 .button {
-	@apply inline-flex items-center justify-center transition-colors focus-visible:outline-none disabled:opacity-50 disabled:pointer-events-none py-2;
+	@apply inline-flex items-center justify-center transition-colors focus-visible:outline-none disabled:opacity-50 disabled:pointer-events-none py-2 ;
 }
 
 .default {

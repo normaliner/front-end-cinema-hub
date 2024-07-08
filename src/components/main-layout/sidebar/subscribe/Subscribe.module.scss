@@ -7,6 +7,6 @@
 		@apply text-sm text-neutral-300;
 	}
 	.button {
-		@apply w-full mt-4;
+		@apply w-full mt-4 hover:bg-primary/50;
 	}
 }

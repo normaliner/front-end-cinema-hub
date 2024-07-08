@@ -1,9 +1,16 @@
-import React from 'react'
+'use client'
+import Slider from '@/components/ui/slider/Slider'
+import { ISlide } from '@/components/ui/slider/slider.interface';
+import { FC } from 'react'
 
-const Home = () => {
-	return (
-		<div>Home</div>
-	)
+interface IHome {
+	slides: ISlide[];
 }
 
-export default Home
+const Home:FC<IHome> = ({slides}) => {
+	return <>
+	{slides.length && <Slider slides={slides}/>}
+	</>;
+};
+
+export default Home;
