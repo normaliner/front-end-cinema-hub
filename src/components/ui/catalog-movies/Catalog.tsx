@@ -21,11 +21,11 @@ const Catalog: FC<ICatalog> = ({
 			<Heading className={styles.heading}>{title}</Heading>
 			{description && <Description text={description} />}
 			<section className={styles.movies}>
-				{isLoading &&
+				{isLoading ? (
 					Array.from({ length: 8 }).map((_, index) => (
 						<SkeletonLoader key={index} className={styles.loading} />
-					))}
-				{!isLoading && movies.length ? (
+					))
+				) : movies.length ? (
 					movies.map(movie => (
 						<GalleryItem
 							key={movie.id}
