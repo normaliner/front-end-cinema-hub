@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Button from '@/components/ui/form-elements/button/Button';
-import { Icon } from '@/components/ui/icon';
+import { Icon } from '@/components/ui/Icon';
 
 interface IAdminCreateButton {
 	onClick?: () => void;

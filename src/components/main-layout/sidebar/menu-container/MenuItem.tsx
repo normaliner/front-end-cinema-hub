@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
-import { Icon } from '@/components/ui/icon';
+import { Icon } from '@/components/ui/Icon';
 
 import styles from './Menu.module.scss';
 import { IMenuItem } from './menu.interface';

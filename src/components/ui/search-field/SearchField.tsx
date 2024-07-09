@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from 'react';
 
-import { Icon } from '../icon';
+import { Icon } from '../Icon';
 
 import styles from './SearchField.module.scss';
 

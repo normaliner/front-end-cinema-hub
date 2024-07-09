@@ -7,7 +7,7 @@ import { LuLoader } from 'react-icons/lu';
 import { MdOutlineAdminPanelSettings } from 'react-icons/md';
 
 import Button from '@/components/ui/form-elements/button/Button';
-import { Icon } from '@/components/ui/icon';
+import { Icon } from '@/components/ui/Icon';
 
 import { ADMIN_URL, DASHBOARD_URL, PUBLIC_URL } from '@/config/url.config';
 
