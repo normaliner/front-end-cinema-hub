@@ -2,7 +2,7 @@
 .slider {
 	@apply relative;
 	.slide {
-		@apply relative h-[350px] overflow-hidden shadow-xl flex items-center;
+		@apply relative h-[450px] overflow-hidden shadow-xl flex items-center;
 		@include fade-bg-gradient();
 
 		.content {
@@ -18,6 +18,9 @@
 			.button {
 				@apply px-10 hover:bg-primary/50;
 			}
+		}
+		.image {
+			@apply object-cover object-center;
 		}
 	}
 }
