@@ -29,7 +29,7 @@ class UserService {
 		return profile;
 	}
 	async toggleFavourites(movieId: string) {
-		return axiosWithAuth.post(API_URL.users('/profile/favourites'), movieId);
+		return axiosWithAuth.post(API_URL.users('/profile/favourites'), {movieId});
 	}
 	async getById(id: string) {
 		return axiosWithAuth.get<IUser>(API_URL.users(`/by-id/${id}`));

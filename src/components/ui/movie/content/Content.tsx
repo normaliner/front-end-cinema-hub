@@ -13,6 +13,7 @@ import Heading from '../../heading/Heading';
 
 import styles from './Content.module.scss';
 import ContentList from './content-list/ContentList';
+import FavoutiteButton from './favourite-button/FavoutiteButton';
 
 interface IContent {
 	movie: IMovie;
@@ -56,6 +57,7 @@ const Content: FC<IContent> = ({ movie }) => {
 				<MdStarRate />
 				<span>{rating.toFixed(1)}</span>
 			</div>
+			{user && <FavoutiteButton movieId={movie.id} />}
 		</div>
 	);
 };
