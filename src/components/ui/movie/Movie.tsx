@@ -39,7 +39,7 @@ const Movie: FC<IMovieProps> = ({ initialMovie, similarMovies, slug = '' }) => {
 				Detail={() => <Content movie={movie} />}
 			/>
 			<div className='px-6 mb-10'>
-				<VideoPlayer />
+				<VideoPlayer videoSource={movie.videoUrl} />
 				<SimilarMovies similarMovies={similarMovies} />
 				<Reviews />
 			</div>
