@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Front-End Cinema Hub
 
-## Getting Started
+This project is the front-end for a cinema hub, built using Next.js, TypeScript, React, Tailwind CSS, and SCSS modules. It provides a user interface for managing and interacting with cinema-related data.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Demo](#demo)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Check out the live demo [here](https://front-end-cinema-hub-xi.vercel.app/).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Built with Next.js for server-side rendering and static site generation.
+- TypeScript for type safety and better developer experience.
+- Styled using Tailwind CSS and SCSS modules for modular and scalable CSS.
+- Rich text editing with Draft.js.
+- Form handling with react-hook-form.
+- Custom icons with react-icons.
+- Transition effects using react-transition-group.
+- Select components with react-select.
+- Data visualization with Recharts.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```sh
+    git clone https://github.com/yourusername/front-end-cinema-hub.git
+    cd front-end-cinema-hub
+    ```
 
-## Deploy on Vercel
+2. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```sh
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Set up environment variables:
+
+    Create a `.env.local` file in the root directory and add the necessary environment variables. Refer to `.env.example` for the required variables.
+
+## Usage
+
+1. Start the development server:
+
+    ```sh
+    yarn dev
+    ```
+
+2. Build the project:
+
+    ```sh
+    yarn build
+    ```
+
+3. Start the production server:
+
+    ```sh
+    yarn start
+    ```
+
+## Scripts
+
+- `dev`: Start the development server.
+- `build`: Build the project.
+- `start`: Start the production server.
+- `lint`: Run ESLint to check for linting errors.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the UNLICENSED License.
