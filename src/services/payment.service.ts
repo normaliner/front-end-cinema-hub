@@ -12,7 +12,9 @@ class PaymentService {
 		return data;
 	}
 	async checkout(amount: number) {
-		return axiosWithAuth.post<IPaymentResponse>(API_URL.payments(''), amount);
+		return axiosWithAuth.post<IPaymentResponse>(API_URL.payments(''), {
+			amount,
+		});
 	}
 	async delete(id: string) {
 		return axiosWithAuth.delete<string>(API_URL.payments(`/${id}`));
