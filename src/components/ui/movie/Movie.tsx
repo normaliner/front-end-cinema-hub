@@ -24,12 +24,12 @@ interface IMovieProps {
 
 const Movie: FC<IMovieProps> = ({ initialMovie, similarMovies, slug = '' }) => {
 	const { data: movie } = useQuery({
-		queryKey: ['get value', initialMovie.id],
+		queryKey: ['get movie', initialMovie.id],
 		queryFn: () => movieService.getBySlug(slug),
 		initialData: initialMovie,
 		enabled: !!slug,
 	});
-	console.log('test');
+
 	useUpdateCountViews(slug);
 
 	return (
@@ -41,7 +41,7 @@ const Movie: FC<IMovieProps> = ({ initialMovie, similarMovies, slug = '' }) => {
 			<div className='px-6 mb-10'>
 				<VideoPlayer videoSource={movie.videoUrl} />
 				<SimilarMovies similarMovies={similarMovies} />
-				<Reviews />
+				<Reviews reviews={movie.reviews} movieId={movie.id} />
 			</div>
 		</div>
 	);

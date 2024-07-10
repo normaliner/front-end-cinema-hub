@@ -33,6 +33,7 @@ export default function RootLayout({
 		<html lang='ru' className={`${GeistSans.variable} ${GeistMono.variable}`}>
 			<body>
 				<Providers> {children}</Providers>
+				<div id='modal'></div>
 			</body>
 		</html>
 	);

@@ -1,10 +1,10 @@
-import { axiosClassic, axiosWithAuth } from '@/api/interceptors';
+import { axiosWithAuth } from '@/api/interceptors';
 
 import { API_URL } from '@/config/api.config';
 
 import { IReview } from '@/types/review.types';
 
-type TypeData = {
+export type TypeData = {
 	rating: number;
 	text: string;
 };
@@ -14,8 +14,11 @@ class ReviewService {
 		return data;
 	}
 
-	async leave(movieId: string, data: IReview) {
-		return axiosWithAuth.post<IReview[]>(API_URL.reviews(`/leave/${movieId}`), data);
+	async leave(movieId: string, data: TypeData) {
+		return axiosWithAuth.post<IReview[]>(
+			API_URL.reviews(`/leave/${movieId}`),
+			data,
+		);
 	}
 	async delete(id: string) {
 		return axiosWithAuth.delete<string>(API_URL.reviews(`/${id}`));
